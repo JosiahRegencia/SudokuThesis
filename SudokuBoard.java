@@ -78,9 +78,14 @@ public abstract class SudokuBoard
   
   public static void main(String []arg)
   {
-    SudokuBoard board = new SB_BitMatrix();
+    SudokuBoard board = new SB_IntMatrix();
     board.incorporateClues(PUZZLE1);
-    board.solve();
+    board.set(5, 5, 4);
+    System.out.println("Row Compatibility: " + board.isRowCompatible(5, 5));
+    // System.out.println("Column Compatibility: " + board.isColCompatible(5, 5));
+    // System.out.println("Box Compatibility: " + board.isBoxCompatible(5, 5));
+    // System.out.println("Compatibility: " + board.isCompatible(5, 5));
+    // board.solve();
   }
   
   public static int[] PUZZLE1 = {115, 123,157, 216, 241, 259, 265, 329, 338, 386, 418, 456, 493, 514, 548, 563, 591, 617, 652, 696, 726, 772, 788, 844, 851, 869, 895, 958, 987, 999};
