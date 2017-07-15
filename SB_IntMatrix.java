@@ -1,9 +1,6 @@
-
-  
 public class SB_IntMatrix extends SudokuBoard
 {
-  int[][] matrix = new int[9][9];
-
+  int [][] matrix = new int[9][9];
   public SB_IntMatrix()
   {
   }
@@ -21,62 +18,57 @@ public class SB_IntMatrix extends SudokuBoard
   boolean isRowCompatible(int r, int c)
   {
     int value = get(r, c);
-    int counter = 0;
 
     for (int i = 1; i <= 9; i++) {
-      if (value == get(r, i)) {
-        counter = counter + 1;
+      if ((i != c) && (value == get(r, i))) { 
+        return false;
       }
     }
-
-    System.out.println("row counter: " + counter);
-
-    if (counter > 1) {
-      return false;
-    }
-
     return true;
   }
   
   boolean isColCompatible(int r, int c) 
   {
     int value = get(r, c);
-    int counter = 0;
 
     for (int i = 1; i <= 9; i++) {
-      if (value == get(i, c)) {
-        counter = counter + 1;
+      if ((i != r) && (value == get(i, c))) {
+        return false;
       }
     }
-
-    System.out.println("column counter: " + counter);
-
-    if (counter > 1) {
-      return false;
-    }
-
     return true;
   }
 
   boolean isBoxCompatible(int r, int c) 
   { 
-    int value = get(r, c);
-    int counter = 0;
+   int value = get(r, c);
+   int startRow = getBase(r);
+   int startCol = getBase(c);
+   int lastRow = getBase(r) + 2;
+   int lastCol = getBase(c) + 2;
 
-    for (int i = r - 1; i < r + 2; i++) {
-      for (int j = c - 1; j < c + 2; j++) {
-        if (value == get(i, j)) {
-          counter = counter + 1;
-        }
+   for (int i = startRow; i <= lastRow; i++) {
+    for (int j = startCol; j <= lastCol; j++) {
+      if (!((i == r) && (j == c)) && value == get(i, j)) {
+        return false;
       }
     }
+   }
+   return true;
+  }
 
-    System.out.println("box counter: " + counter);
-
-    if (counter > 1) {
-      return false;
+  int getBase(int i)
+  {
+    if ((i >= 1) && (i <= 3)) {
+      return 1;
+    }
+    else if ((i >= 4) && (i <= 6)) {
+      return 4;
+    }
+    else if ((i >= 7) && (i <= 9)) {
+      return 7;
     }
 
-    return true;
+    return 0;
   }
 }

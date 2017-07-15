@@ -9,6 +9,7 @@ public abstract class SudokuBoard
 {
   protected int ROWS = 9;
   protected int COLS = 9;
+  int counter = 0;
   
   // data accessors
   public abstract int get(int r, int c);
@@ -72,7 +73,11 @@ public abstract class SudokuBoard
       for (int j=1; j<=COLS; j++)
         System.out.print(get(i,j));
        System.out.println();
-    }               
+    }           
+
+    counter = counter + 1;
+    System.out.println("count: " + counter);
+    System.out.println();    
   }
  
   
@@ -80,14 +85,14 @@ public abstract class SudokuBoard
   {
     SudokuBoard board = new SB_IntMatrix();
     board.incorporateClues(PUZZLE1);
-    // board.set(5, 5, 4);
-    // System.out.println("Row Compatibility: " + board.isRowCompatible(5, 5));
-    // System.out.println("Column Compatibility: " + board.isColCompatible(5, 5));
-    // System.out.println("Box Compatibility: " + board.isBoxCompatible(5, 5));
-    // System.out.println("Compatibility: " + board.isCompatible(5, 5));
+    // board.set(7, 3, 7);
+    // System.out.println("row: " + board.isRowCompatible(7, 3));
+    // System.out.println("col: " + board.isColCompatible(7, 3));
+    // System.out.println("box: " + board.isBoxCompatible(7, 3));
+    // System.out.println("compatible: " + board.isCompatible(7, 3));
     board.solve();
   }
   
-  public static int[] PUZZLE1 = {115, 123,157, 216, 241, 259, 265, 329, 338, 386, 418, 456, 493, 514, 548, 563, 591, 617, 652, 696, 726, 772, 788, 844, 851, 869, 895, 958, 987, 999};
+  public static int[] PUZZLE1 = {181, 214, 322, 455, 497, 538, 573, 631, 659, 713, 744, 772, 825, 841, 948, 966};
   
 }
