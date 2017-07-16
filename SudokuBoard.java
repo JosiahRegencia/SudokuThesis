@@ -5,11 +5,16 @@
   *   Indices are base-1
   *   Empty cells are filled with 0 values
   */
+
 public abstract class SudokuBoard
 {
   protected int ROWS = 9;
   protected int COLS = 9;
-  int counter = 0;
+  int solutionsCounter;
+  double startTime;
+  double endTime;
+  double[] data = new double[3];
+  int puzzleNum = countTotalRows();
   
   // data accessors
   public abstract int get(int r, int c);
@@ -33,6 +38,9 @@ public abstract class SudokuBoard
   // this is the one called to solve the sudoku
   public void solve()
   {
+    //convert to seconds
+    startTime = System.nanoTime() / 1000000000.0;
+    // System.out.println("Star Time: " + startTime);
     solve(1,1);
   }
   
@@ -62,7 +70,17 @@ public abstract class SudokuBoard
       else
         solve((c==9)?(r+1):r, (c==9)?1:(c+1));
     }
-    else print();
+    else 
+    {
+      solutionsCounter = solutionsCounter + 1;
+
+      //convert to seconds
+      endTime = System.nanoTime() / 1000000000.0;
+      // print();
+      // System.out.println("End Time: " + endTime);
+      // System.out.println("Elapsed Time: " + (endTime - startTime));
+      // System.out.println();
+    }
   }
   
   // sample display function
@@ -75,24 +93,77 @@ public abstract class SudokuBoard
        System.out.println();
     }           
 
-    counter = counter + 1;
-    System.out.println("count: " + counter);
-    System.out.println();    
+    System.out.println("count: " + solutionsCounter);
+    // System.out.println();    
+  } 
+
+  void saveData (double[] data) throws java.io.IOException
+  {
+    // java.io.File dataCSV = new java.io.File("16-clue_results.csv");
+
+    // java.io.PrintWriter outfile = new java.io.PrintWriter(dataCSV);
+
+    try 
+    {
+      java.io.BufferedWriter outfile = new java.io.BufferedWriter(new java.io.FileWriter("16-clue_results.csv", true));
+
+      for (int i = 0; i < data.length; i++) {
+      outfile.write(String.valueOf(data[i]));
+      outfile.append(',');
+      }
+
+      outfile.append('\n');
+      outfile.close();
+
+    } catch (java.io.IOException e) {
+      e.printStackTrace();
+    }
+
+    // outfile.append('\n');
   }
- 
+
+  static int countTotalRows () {
+    int count = 1;
+      try 
+      {
+        java.io.BufferedReader bufferedReader = new java.io.BufferedReader(new java.io.FileReader("16-clue_results.csv"));
+        String input;
+
+        while((input = bufferedReader.readLine()) != null)
+          {
+            count++;
+          }
+
+      } catch (java.io.IOException e) {
+          e.printStackTrace();
+      }
+
+      return count;
+  }
   
   public static void main(String []arg)
   {
     SudokuBoard board = new SB_IntMatrix();
     board.incorporateClues(PUZZLE1);
-    // board.set(7, 3, 7);
-    // System.out.println("row: " + board.isRowCompatible(7, 3));
-    // System.out.println("col: " + board.isColCompatible(7, 3));
-    // System.out.println("box: " + board.isBoxCompatible(7, 3));
-    // System.out.println("compatible: " + board.isCompatible(7, 3));
+    board.solutionsCounter = 0;
     board.solve();
+    board.data[0] = board.puzzleNum;
+    board.data[1] = board.solutionsCounter;
+    board.data[2] = board.endTime - board.startTime;
+    System.out.println("Number of Solution: " + board.data[1]);
+    System.out.println("Elapsed Time: " + (board.data[2]));
+
+    try 
+    {
+      board.saveData(board.data);
+    } catch (java.io.IOException e) {
+      e.printStackTrace();
+    }
   }
   
-  public static int[] PUZZLE1 = {181, 214, 322, 455, 497, 538, 573, 631, 659, 713, 744, 772, 825, 841, 948, 966};
+  // public static int[] PUZZLE1 = {181, 214, 322, 455, 497, 538, 573, 631, 659, 713, 744, 772, 825, 841, 948, 966};
+  public static int[] PUZZLE1 = {115, 123,157, 216, 241, 259, 265, 329, 338, 386, 418, 456, 493, 514, 548, 563, 591, 617, 652, 696, 726, 772, 788, 844, 851, 869, 895, 958, 987, 999};
+  // public static int[] PUZZLE1 = {119, 136, 157, 174, 193, 244, 272, 327, 352, 363, 381, 415, 471, 524, 542, 568, 586, 633, 695, 723, 747, 785, 837, 865, 914, 935, 951, 977, 998};
+
   
 }
