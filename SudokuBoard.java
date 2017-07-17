@@ -13,7 +13,7 @@ public abstract class SudokuBoard
   int solutionsCounter;
   double startTime;
   double endTime;
-  double[] data = new double[3];
+  double[] data = new double[5];
   int puzzleNum = countTotalRows();
   
   // data accessors
@@ -40,7 +40,6 @@ public abstract class SudokuBoard
   {
     //convert to seconds
     startTime = System.nanoTime() / 1000000000.0;
-    // System.out.println("Star Time: " + startTime);
     solve(1,1);
   }
   
@@ -76,10 +75,6 @@ public abstract class SudokuBoard
 
       //convert to seconds
       endTime = System.nanoTime() / 1000000000.0;
-      // print();
-      // System.out.println("End Time: " + endTime);
-      // System.out.println("Elapsed Time: " + (endTime - startTime));
-      // System.out.println();
     }
   }
   
@@ -94,14 +89,10 @@ public abstract class SudokuBoard
     }           
 
     System.out.println("count: " + solutionsCounter);
-    // System.out.println();    
   } 
 
   void saveData (double[] data) throws java.io.IOException
   {
-    // java.io.File dataCSV = new java.io.File("16-clue_results.csv");
-
-    // java.io.PrintWriter outfile = new java.io.PrintWriter(dataCSV);
 
     try 
     {
@@ -118,12 +109,10 @@ public abstract class SudokuBoard
     } catch (java.io.IOException e) {
       e.printStackTrace();
     }
-
-    // outfile.append('\n');
   }
 
   static int countTotalRows () {
-    int count = 1;
+    int count = 0;
       try 
       {
         java.io.BufferedReader bufferedReader = new java.io.BufferedReader(new java.io.FileReader("16-clue_results.csv"));
@@ -131,7 +120,7 @@ public abstract class SudokuBoard
 
         while((input = bufferedReader.readLine()) != null)
           {
-            count++;
+            count = count + 1;
           }
 
       } catch (java.io.IOException e) {
@@ -144,26 +133,44 @@ public abstract class SudokuBoard
   public static void main(String []arg)
   {
     SudokuBoard board = new SB_IntMatrix();
-    board.incorporateClues(PUZZLE1);
-    board.solutionsCounter = 0;
-    board.solve();
-    board.data[0] = board.puzzleNum;
-    board.data[1] = board.solutionsCounter;
-    board.data[2] = board.endTime - board.startTime;
-    System.out.println("Number of Solution: " + board.data[1]);
-    System.out.println("Elapsed Time: " + (board.data[2]));
 
-    try 
-    {
-      board.saveData(board.data);
-    } catch (java.io.IOException e) {
-      e.printStackTrace();
-    }
+    int numClues;
+    String[] stringSet = new String[16];
+    int[] PUZZLE1 = new int[16];
+
+     try {
+        java.io.BufferedReader csvFile = new java.io.BufferedReader(new java.io.FileReader("clue_set"));
+        String dataRow;
+        while ((dataRow = csvFile.readLine()) !=  null) {
+          board.puzzleNum = board.puzzleNum + 1;
+          stringSet = dataRow.split(" ");
+
+          for (int i = 0; i < stringSet.length; i++) {
+            PUZZLE1[i] = Integer.parseInt(stringSet[i]);
+          }
+
+          board.incorporateClues(PUZZLE1);
+          
+          for (int i = 0; i < 3; i++) {
+            board.solutionsCounter = 0;
+            board.solve();
+            board.data[0] = board.puzzleNum;
+            board.data[1] = board.solutionsCounter;
+            board.data[2 + i] = board.endTime - board.startTime;
+          }
+
+          try 
+          {
+            board.saveData(board.data);
+          } catch (java.io.IOException e) {
+            e.printStackTrace();
+          }
+        }   
+        csvFile.close();
+
+      } catch (java.io.IOException e) {
+          e.printStackTrace();
+      }
   }
-  
-  // public static int[] PUZZLE1 = {181, 214, 322, 455, 497, 538, 573, 631, 659, 713, 744, 772, 825, 841, 948, 966};
-  public static int[] PUZZLE1 = {115, 123,157, 216, 241, 259, 265, 329, 338, 386, 418, 456, 493, 514, 548, 563, 591, 617, 652, 696, 726, 772, 788, 844, 851, 869, 895, 958, 987, 999};
-  // public static int[] PUZZLE1 = {119, 136, 157, 174, 193, 244, 272, 327, 352, 363, 381, 415, 471, 524, 542, 568, 586, 633, 695, 723, 747, 785, 837, 865, 914, 935, 951, 977, 998};
-
   
 }
