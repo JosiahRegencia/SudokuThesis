@@ -1,0 +1,17 @@
+class SimpleXCMatrix extends XCMatrix
+{
+  BitSet[] data;
+  
+  SimpleXCMatrix(int r, int c)
+  {
+    super(r,c);
+  }
+  
+  boolean isSet(int r, int c)
+  {
+    return data[r].test 
+  }
+  int nextColAfterOnRow(int start, int row);
+  int nextRowAfterOnCol(int start, int col);
+
+}

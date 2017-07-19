@@ -1,0 +1,14 @@
+import java.util.Stack;
+
+class SxAlgorithm
+{
+  Stack<int> solutions = new StackAsArray<int>(100);
+  
+  SxMatrix matrix;
+  
+  
+  
+  void backtrack()
+  {
+    
+  }

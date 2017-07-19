@@ -1,0 +1,42 @@
+class Row
+{
+  long data = 0;
+ 
+  /*
+   * xrow;
+  xcol;
+  xbox;
+  xval;
+  
+  srow;
+  scol;
+  sval;
+  
+  final long last = 511;
+  */
+  
+  Row(short r, short c, short b, short v)
+  {
+    data = (long)r | ((long) c)<<9 | ((long) b)<<18  | ((long) v)<<27;
+  }
+  
+  short xRow()
+  {    return (short)(data & 511);}
+  
+  short xCol()
+  {    return (short)(data>>9 & 511);}
+  
+  short xBox()
+  {    return (short)(data>>18 & 511L);}
+  
+  short xVal()
+  {    return (short)(data>>27 & 511L);}
+    
+  
+  void s(short r, short c, short v)
+  { 
+    data |= ((long)r) <<36 | ((long)c) <<40 | ((long)v) <<44;
+  }
+    
+    
+}

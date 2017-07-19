@@ -1,0 +1,6 @@
+// DrJava saved history v2
+
+short a = 1;//End of Interaction//
+Row r = new Row(a,a,a,a);//End of Interaction//
+r.xCol()//End of Interaction//
+r.xRow()//End of Interaction//

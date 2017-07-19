@@ -1,0 +1,30 @@
+import java.util.BitSet;
+
+SxMatrix
+{
+  // 729 rows!
+  
+  SxRow[] rows;
+  BitSet deletedRows = new BitSet(729);
+  BitSet deletedCols = new BitSet(324);
+  
+  boolean SxIsEmpty()
+  {
+    return (deletedRows.cardinality() == 729) || (deletedCols.cardinality() == 324);
+  }
+  
+  int SxChooseCol()
+  {
+    return deletedCols.nextClearBit(0);
+  }
+  
+  int SxChooseRow(int col)
+  {
+    short c = (short)col;
+    
+    int i = deletedRows.nextClearBit(0);
+    while (rows[i].isClear(c))
+      i = deletedRows.nextClearBit(i+1);
+    return i;
+  }
+}

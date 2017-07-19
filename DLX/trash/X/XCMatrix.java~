@@ -1,0 +1,83 @@
+public abstract class XCMatrix
+{
+  int ROWS, COLS;
+  BitSet presentRows, presentCols;
+  
+  XCMatrix(int numRows, int numCols)
+  {
+    ROWS = numRows;
+    COLS = numCols;
+    
+    presentRows = new BitSet(numRows);
+    presentCols = new BitSet(numCols);
+    
+    presentRows.set(0, ROWS - 1);
+    presentCols.set(0, COLS - 1);
+  }
+  
+  boolean isEmpty()
+  {
+    return presentCols.cardinality() == 0;
+  }
+  
+  int chooseCol()
+  {
+    presentCols.nextSet(0);
+  }
+  
+  int chooseRow(int col)
+  {
+    for(int r = presentRows.nextSet(0); r<ROWS; r = presentRows.nextSet(r+1))
+      if (isSet(r, col)
+            return r;
+    return -1;
+  }
+  
+  abstract boolean isSet(int r, int c);
+  abstract Iterator getColsOnRow(int row);
+  abstract Iterator getRowsOnCol(int col);
+    
+  void search(int depth)
+  {
+    if(isEmpty())
+    {
+      return;
+    } 
+    
+    int c = chooseCol();
+    for (int r = presentRows.nextSet(0); r<ROWS; r = presentRows.nextSet(r+1))
+    {
+      if (isSet(r, c))
+      {
+        soln.push(r);
+        cover(r);
+        search(depth+1);
+        uncover(r);
+        soln.pop();
+      }
+    }
+      
+  }
+  
+  void cover(int r)
+  {
+    Iterator<Integer> cols = getColsOnRow(r);
+    Iterator<Integer> rows;
+    while(cols.hasNext())
+    {
+      int j = cols.next();
+      if(presentCols.isSet())
+      {
+        presentCols.clear(j);
+        rows = getRowsOnCol(j);
+       
+        while (rows.hasNext())
+        {
+          int i = rows.next();
+          if(presentRows.isSet(i))
+            presentRows.clear(i);
+        }
+    }
+  }
+  
+  
