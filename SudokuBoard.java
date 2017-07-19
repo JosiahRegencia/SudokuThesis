@@ -132,14 +132,13 @@ public abstract class SudokuBoard
   
   public static void main(String []arg)
   {
-    SudokuBoard board = new SB_IntMatrix();
-
     int numClues;
 
      try {
         java.io.BufferedReader csvFile = new java.io.BufferedReader(new java.io.FileReader("clue_set"));
         String dataRow;
         while ((dataRow = csvFile.readLine()) !=  null) {
+          SudokuBoard board = new SB_IntMatrix();
           String[] stringSet = new String[16];
           int[] PUZZLE1 = new int[16];
           board.puzzleNum = board.puzzleNum + 1;
