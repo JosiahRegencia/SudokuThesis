@@ -13,7 +13,7 @@ public abstract class SudokuBoard
   int solutionsCounter;
   double startTime;
   double endTime;
-  double[] data = new double[5];
+  String[] data = new String[8];
   int puzzleNum = countTotalRows();
   
   // data accessors
@@ -91,7 +91,7 @@ public abstract class SudokuBoard
     System.out.println("count: " + solutionsCounter);
   } 
 
-  void saveData (double[] data) throws java.io.IOException
+  void saveData (String[] data) throws java.io.IOException
   {
 
     try 
@@ -135,13 +135,13 @@ public abstract class SudokuBoard
     SudokuBoard board = new SB_IntMatrix();
 
     int numClues;
-    String[] stringSet = new String[16];
-    int[] PUZZLE1 = new int[16];
 
      try {
         java.io.BufferedReader csvFile = new java.io.BufferedReader(new java.io.FileReader("clue_set"));
         String dataRow;
         while ((dataRow = csvFile.readLine()) !=  null) {
+          String[] stringSet = new String[16];
+          int[] PUZZLE1 = new int[16];
           board.puzzleNum = board.puzzleNum + 1;
           stringSet = dataRow.split(" ");
 
@@ -151,12 +151,13 @@ public abstract class SudokuBoard
 
           board.incorporateClues(PUZZLE1);
           
-          for (int i = 0; i < 3; i++) {
+          for (int i = 0; i < 5; i++) {
             board.solutionsCounter = 0;
             board.solve();
-            board.data[0] = board.puzzleNum;
-            board.data[1] = board.solutionsCounter;
-            board.data[2 + i] = board.endTime - board.startTime;
+            board.data[0] = Integer.toString(board.puzzleNum);
+            board.data[1] = dataRow;
+            board.data[2] = Integer.toString(board.solutionsCounter);
+            board.data[3   + i] = Double.toString(board.endTime - board.startTime);
           }
 
           try 
