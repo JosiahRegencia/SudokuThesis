@@ -33,8 +33,16 @@ abstract class XMatrix
   public static void main(String[] args)
   {
     int[] input = Sudoku.sbHARD_01;
+
+    // for (int i = 0; i < input.length; i++) {
+    //   System.out.print(input[i] + " ");
+    // }
     
     // runAndDisplayStat("simple",new BitXCMatrix(input));
     runAndDisplayStat("DLX", DLXMatrix.makeSudoku(input));
+
+    for (int i = 0; i < input.length; i++) {
+      System.out.print(input[i] + " ");
+    }
   }
 }
