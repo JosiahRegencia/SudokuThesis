@@ -1,0 +1,363 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Bertram~Felgenhauer%
+}{%
+Bertram~Felgenhauer%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+Felgenhauer}
+\APACinsertmetastar {%
+Felgenhauer}%
+\begin{APACrefauthors}%
+Bertram~Felgenhauer, F\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+\APACrefbtitle {\textit{Mathematics of Sudoku I}.} {\textit{Mathematics of
+  Sudoku I}.}
+\newblock
+\APAChowpublished
+  {\url{http://www.afjarvis.staff.shef.ac.uk/sudoku/felgenhauer_jarvis_spec1.pdf}}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Brian~Bemman%
+}{%
+Brian~Bemman%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+Bemman}
+\APACinsertmetastar {%
+Bemman}%
+\begin{APACrefauthors}%
+Brian~Bemman, D\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+\APACrefbtitle {\textit{Exact Cover Problem in Milton Babbit's All-Partition
+  Array}.} {\textit{Exact Cover Problem in Milton Babbit's All-Partition
+  Array}.}
+\newblock
+\APAChowpublished
+  {\url{http://www.titanmusic.com/papers/public/BemmanMeredithMCM2015.pdf}}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Cazenave%
+}{%
+Cazenave%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+Cazenave}
+\APACinsertmetastar {%
+Cazenave}%
+\begin{APACrefauthors}%
+Cazenave, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+\APACrefbtitle {\textit{A search based Sudoku solver}.} {\textit{A search based
+  Sudoku solver}.}
+\newblock
+\APAChowpublished
+  {\url{http://www.lamsade.dauphine.fr/~cazenave/papers/sudoku.pdf}}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Dahlke%
+}{%
+Dahlke%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+Dahlke}
+\APACinsertmetastar {%
+Dahlke}%
+\begin{APACrefauthors}%
+Dahlke, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+\APACrefbtitle {\textit{Exact Cover}.} {\textit{Exact Cover}.}
+\newblock
+\APAChowpublished {\url{http://www.mathreference.com/lan-cx-np,excov.html}}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Gary~McGuire%
+}{%
+Gary~McGuire%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+McGuire}
+\APACinsertmetastar {%
+McGuire}%
+\begin{APACrefauthors}%
+Gary~McGuire, G\BPBI C., Bastian~Tugemann.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+\APACrefbtitle {\textit{There is no 16-clue Sudoku: Solving the Sudoku Minimum
+  Number of Clues Problem}.} {\textit{There is no 16-clue Sudoku: Solving the
+  Sudoku Minimum Number of Clues Problem}.}
+\newblock
+\APAChowpublished {\url{http://www.math.ie/McGuire_V1.pdf}}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kapanowski%
+}{%
+Kapanowski%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+Kapanowski}
+\APACinsertmetastar {%
+Kapanowski}%
+\begin{APACrefauthors}%
+Kapanowski, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+\APACrefbtitle {\textit{Python for Education: The Exact Cover Problem}.}
+  {\textit{Python for Education: The Exact Cover Problem}.}
+\newblock
+\APAChowpublished {\url{https://arxiv.org/pdf/1307.7042.pdf}}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Knuth%
+}{%
+Knuth%
+}{%
+{\protect \APACyear {2000}}%
+}]{%
+Knuth}
+\APACinsertmetastar {%
+Knuth}%
+\begin{APACrefauthors}%
+Knuth, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2000}{}{}.
+\newblock
+\APACrefbtitle {\textit{Dancing Links}.} {\textit{Dancing Links}.}
+\newblock
+\APAChowpublished
+  {\url{https://www.ocf.berkeley.edu/~jchu/publicportal/sudoku/0011047.pdf}}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mattias~Harrysson%
+}{%
+Mattias~Harrysson%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+Harrysson}
+\APACinsertmetastar {%
+Harrysson}%
+\begin{APACrefauthors}%
+Mattias~Harrysson, H\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+\APACrefbtitle {\textit{Solving Sudoku efficiently with Dancing Links}.}
+  {\textit{Solving Sudoku efficiently with Dancing Links}.}
+\newblock
+\APAChowpublished
+  {\url{https://www.kth.se/social/files/58861771f276547fe1dbf8d1/HLaestanderMHarrysson_dkand14.pdf}}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mukherjee%
+, Datta%
+, Chanda%
+\BCBL {}\ \BBA {} Pathak%
+}{%
+Mukherjee%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+Mukherjee}
+\APACinsertmetastar {%
+Mukherjee}%
+\begin{APACrefauthors}%
+Mukherjee, S.%
+, Datta, S.%
+, Chanda, P\BPBI B.%
+\BCBL {}\ \BBA {} Pathak, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+\APACrefbtitle {\textit{Comparative Study of Different Algorithms to Solve N
+  Queens Problem}.} {\textit{Comparative Study of Different Algorithms to Solve
+  N Queens Problem}.}
+\newblock
+\APAChowpublished
+  {\url{http://wireilla.com/papers/ijfcst/V5N2/5215ijfcst02.pdf}}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Nivasch%
+}{%
+Nivasch%
+}{%
+{\protect \APACyear {2004}}%
+}]{%
+Nivasch}
+\APACinsertmetastar {%
+Nivasch}%
+\begin{APACrefauthors}%
+Nivasch, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{}{}.
+\newblock
+\APACrefbtitle {\textit{Solving Pentomino Puzzles with Backtracking}.}
+  {\textit{Solving Pentomino Puzzles with Backtracking}.}
+\newblock
+\APAChowpublished
+  {\url{http://www.cs.brandeis.edu/~storer/JimPuzzles/PACK/Pentominoes/LINKS/PentominoesNivasch.pdf}}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Patrik~Berggren%
+}{%
+Patrik~Berggren%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+Berggren}
+\APACinsertmetastar {%
+Berggren}%
+\begin{APACrefauthors}%
+Patrik~Berggren, D\BPBI N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+\APACrefbtitle {\textit{A Study of Sudoku solving algorithms}.} {\textit{A
+  Study of Sudoku solving algorithms}.}
+\newblock
+\APAChowpublished
+  {\url{http://www.csc.kth.se/utbildning/kth/kurser/DD143X/dkand12/Group6Alexander/report/PATRIK_BERGGREN_DAVID_NILSSON.rapport.pdf}}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sanjeev~Arora%
+}{%
+Sanjeev~Arora%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+Arora}
+\APACinsertmetastar {%
+Arora}%
+\begin{APACrefauthors}%
+Sanjeev~Arora, B\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+\APACrefbtitle {\textit{Computational Complexity: A Modern Approach}.}
+  {\textit{Computational Complexity: A Modern Approach}.}
+\newblock
+\APAChowpublished {\url{http://theory.cs.princeton.edu/complexity/book.pdf}}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sian~Jones%
+}{%
+Sian~Jones%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+Jones}
+\APACinsertmetastar {%
+Jones}%
+\begin{APACrefauthors}%
+Sian~Jones, P\BPBI R., Stephanie~Perkins.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+\APACrefbtitle {\textit{Properties of Sudoku Puzzles}.} {\textit{Properties of
+  Sudoku Puzzles}.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Takayuki~Yato%
+}{%
+Takayuki~Yato%
+}{%
+{\protect \APACyear {2003}}%
+}]{%
+Yato}
+\APACinsertmetastar {%
+Yato}%
+\begin{APACrefauthors}%
+Takayuki~Yato, T\BPBI S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2003}{}{}.
+\newblock
+\APACrefbtitle {\textit{Complexity and Completeness of Finding Another Solution
+  and Its Application to Puzzles}.} {\textit{Complexity and Completeness of
+  Finding Another Solution and Its Application to Puzzles}.}
+\newblock
+\APAChowpublished
+  {\url{http://www-imai.is.s.u-tokyo.ac.jp/~yato/data2/SIGAL87-2.pdf}}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wilson%
+}{%
+Wilson%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+Wilson}
+\APACinsertmetastar {%
+Wilson}%
+\begin{APACrefauthors}%
+Wilson, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+\APACrefbtitle {\textit{The Sudoku Epidemic}.} {\textit{The Sudoku Epidemic}.}
+\newblock
+\APAChowpublished
+  {\url{http://www.ams.jhu.edu/~castello/150/handouts/SudokuEpidemic.pdf}}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

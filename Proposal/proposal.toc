@@ -1,0 +1,24 @@
+\contentsline {chapter}{Title Page}{i}
+\contentsline {chapter}{Abstract}{ii}
+\contentsline {chapter}{List of Figures}{ii}
+\contentsline {chapter}{List of Tables}{iv}
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Background of the Study}{1}
+\contentsline {section}{\numberline {1.2}Statement of the Problem}{3}
+\contentsline {section}{\numberline {1.3}Objectives of the Study}{3}
+\contentsline {section}{\numberline {1.4}Limitations}{4}
+\contentsline {section}{\numberline {1.5}Significance}{4}
+\contentsline {chapter}{\numberline {2}Literature Review}{5}
+\contentsline {chapter}{\numberline {3}Theoretical Framework}{9}
+\contentsline {section}{\numberline {3.1}Complexity Classes}{9}
+\contentsline {section}{\numberline {3.2}Exact Cover}{11}
+\contentsline {section}{\numberline {3.3}Reduction}{12}
+\contentsline {chapter}{\numberline {4}Methodology}{14}
+\contentsline {section}{\numberline {4.1}Brute-force Implementation}{14}
+\contentsline {section}{\numberline {4.2}Reduction of Blank Sudoku to Exact Cover}{16}
+\contentsline {subsection}{\numberline {4.2.1}Reduction of Sudoku with Clues to Exact Cover}{19}
+\contentsline {section}{\numberline {4.3}DLX Implementation}{20}
+\contentsline {section}{\numberline {4.4}Interpretation of Exact Cover result}{21}
+\contentsline {chapter}{\numberline {5}Research Schedule}{22}
+\contentsline {chapter}{References}{23}
+\contentsline {chapter}{References}{23}
